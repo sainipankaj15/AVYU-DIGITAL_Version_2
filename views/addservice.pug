@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Dance-Website
+  link(rel='stylesheet' href='../static/style.css')
+  link(rel='stylesheet' href='../static/stylecontact.css')
+  link(rel='icon' href='../static/img/logo.png')
+nav#navbar
+  ul
+    #logo
+      img(src='../static/img/3.png' alt='NAN')
+    li
+      a(href='/') Home
+    li
+      a(href='/') Services
+    li
+      a(href='/') About Us
+    li
+      a(href='/contact') Contact Us
+.container
+  form(action='/addservice' method='post')
+    input#name(type='text' name='Name' required='' inputmode='text' placeholder='Enter your Service name')
+    input#Age(type='age' name='Price' required='' inputmode='numeric' placeholder='Enter your Price')
+    input#Age(type='age' name='Pic' required='' placeholder='Enter your Picture URL')
+    textarea(name='Des' id='' cols='32' rows='6' placeholder='Write your Description')
+    button.btn Submit
+footer#foot
+  | Copyright 2022 : Made By Pankaj | All Right Reserved

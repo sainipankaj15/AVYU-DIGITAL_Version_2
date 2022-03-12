@@ -1,0 +1,275 @@
+doctype html
+// Code written by Pankaj Kumar Saini from IIIT Gwalior
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  // <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  title AVYU DIGITAL
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css')
+  link(rel='icon' href='../static/img/logo.png')
+  style.
+    html {
+    scroll-behavior: smooth;
+    }
+// // adding navaiton bar
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+  a.navbar-brand(href='/') AVYU DIGITAL
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link(href='/')
+          | Home 
+          span.sr-only (current)
+      li.nav-item.dropdown
+        a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          | Services
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='#') Clickable PDFs
+          a.dropdown-item(href='#') Graphics Designs
+          a.dropdown-item(href='#') Social Media Post Designing
+          a.dropdown-item(href='#') Product Cover Designing
+          a.dropdown-item(href='#') Web Designing
+          a.dropdown-item(href='#') Web Development
+          a.dropdown-item(href='#') UI/UX
+          .dropdown-divider
+          a.dropdown-item(href='#') Support
+          a.dropdown-item(href='#') Write for us
+      li.nav-item
+        a.nav-link(href='#aboutid') About Us
+      li.nav-item
+        a.nav-link(href='#contactid') Contact Us
+    //
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    // <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    button.btn.btn-success(type='button' style='margin: 2px; ') Sign-In
+    button.btn.btn-danger(type='button' style='margin: 2px; ') Sign-Up
+// navigation baar code end
+
+
+// // adding carousel
+#carouselExampleCaptions.carousel.slide.carousel-fade.mt-3.mb-3.pt-5.mt-md-0(data-ride='carousel')
+  ol.carousel-indicators
+    li.active(data-target='#carouselExampleCaptions' data-slide-to='0')
+    li(data-target='#carouselExampleCaptions' data-slide-to='1')
+    li(data-target='#carouselExampleCaptions' data-slide-to='2')
+    li(data-target='#carouselExampleCaptions' data-slide-to='3')
+    li(data-target='#carouselExampleCaptions' data-slide-to='4')
+    li(data-target='#carouselExampleCaptions' data-slide-to='5')
+  .carousel-inner
+    .carousel-item.active
+      img.d-block.w-100(src='../static/img/1.jpg' alt='...')
+      .carousel-caption.d-none.d-md-block
+        h2
+          | Welcome To Avyu Digital
+        p Avyu(&#x905;&#x935;&#x94D;&#x92F;&#x941;) means crystal clear
+    .carousel-item
+      img.d-block.w-100(src='../static/img/2.jpg' alt='...')
+      .carousel-caption.d-none.d-md-block
+        h2
+          | Welcome To Avyu Digital
+        p
+          | In the same way, We do all your digital work in a very clean manner at Avyu Digital
+    .carousel-item
+      img.d-block.w-100(src='../static/img/3.jpg' alt='...')
+      .carousel-caption.d-none.d-md-block
+        h2
+          | Welcome To Avyu Digital
+        p At Avyu Digital,We pay special attention to quality
+    .carousel-item
+      img.d-block.w-100(src='../static/img/4.jpg' alt='...')
+      .carousel-caption.d-none.d-md-block
+        h2
+          | Welcome To Avyu Digital
+        p Avyu(&#x905;&#x935;&#x94D;&#x92F;&#x941;) means crystal clear
+    .carousel-item
+      img.d-block.w-100(src='../static/img/5.jpg' alt='...')
+      .carousel-caption.d-none.d-md-block
+        h2
+          | Welcome To Avyu Digital
+        p
+          | In the same way, We do all your digital work in a very clean manner at Avyu Digital
+    .carousel-item
+      img.d-block.w-100(src='../static/img/6.jpg' alt='...')
+      .carousel-caption.d-none.d-md-block
+        h2
+          | Welcome To Avyu Digital
+        p At Avyu Digital,We pay special attention to quality
+  a.carousel-control-prev(href='#carouselExampleCaptions' role='button' data-slide='prev')
+    span.carousel-control-prev-icon(aria-hidden='true')
+    span.sr-only Previous
+  a.carousel-control-next(href='#carouselExampleCaptions' role='button' data-slide='next')
+    span.carousel-control-next-icon(aria-hidden='true')
+    span.sr-only Next
+// carusel code end
+
+
+
+
+// Service start
+br#homeid
+.container
+  .row.row-cols-1.row-cols-lg-3.row-cols-md-2
+    each val, key in Project
+      .col.mt-md-3.mb-md-3.mt-sm-2.mb-sm-2.col-md-6.col-lg-4.mb-5
+              .card.h-100.rounded-2
+                img.card-img-top(src=val.Pic alt='...' height='300px' width='40px')
+                .card-body
+                  h2.card-title #{val.Name}
+                  p.card-text
+                    | #{val.Des}
+                  button.btn.btn-outline-secondary(type='button' style='width:100%; margin: 3px; font-size: larger;') &#x20B9; #{val.Price}
+                  button.btn.btn-outline-success(type='button' style='width:100%; margin: 3px; font-size: larger; ') Add to Cart
+
+// Service End
+
+hr
+br#aboutid
+br
+br
+
+// // about page start
+.container.marketing
+  hr.featurette-divider
+  .row.featurette.d-flex.justify-content-center.align-items-center.mb-4
+    .col-md-4
+      h2.featurette-heading
+        | ABOUT US <br>
+        span.text-muted It&rsquo;ll blow your mind.
+      hr
+      p.lead
+        hr
+        |  Avyu Digital is a single-person managed company. I hire employees for every work. We pay
+        |                     personal attention to the work being done with a minimum price. We always complete work within time.
+        |                     You can check out our services in Service Section.
+        hr
+        |  Why you choose us , Because we have many services at one place
+        hr
+      hr
+      |  Words by 
+      a(href='https://www.instagram.com/choudharyy_md/ ' target='_blank') Manoj Dangi
+      hr
+    .col-md-5
+      //- img.bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto.img-fluid(src='../static/img/owner_manoj.jpg.png' width='400' height='400' preserveaspectratio='xMidYMid slice' focusable='false' role='img' aria-label='Placeholder: 500x500')
+      title Placeholder
+      rect(width='100%' height='100%' fill='#eee')
+      text(x='50%' y='50%' fill='#aaa' dy='.3em')
+// about page end
+
+
+// contact page start
+hr
+br#contactid
+.container.mt-5.pt-5
+  h1 Contact Us
+  .row.row-content
+    .col-12
+      h3 Location Information
+    .col-12.col-sm-4.offset-sm-1
+      h5 Our Address
+      address
+        | Near to Tatarpur chauraha,
+        br
+        |                     Alwar,Rajasthan,India
+        br
+        |                     Pin Code = 301404
+        br
+        i.fa.fa-phone.fa-md
+        |  Phone : +91 7891416331
+        br
+        i.fa.fa-envelope.fa-md
+        |  Email : 
+        a(href='mailto:avyudigital@gmail.com') avyudigital@gmail.com
+    .col-12.col-sm-11.offset-sm-1
+      .btn-group(role='group')
+        a.btn.btn-primary(role='button' href='tel:+917891416331')
+          i.fa.fa-phone
+          |                         Call
+        a.btn.btn-google(href='mailto:avyudigital@gmail.com')
+          i.fa.fa-envelope-o
+          |                         Mail
+  // <hr>
+  .row.row-content
+    .col-12
+      h3 Send us your Feedback
+      br
+    .col-12.col-lg-9
+      form(action='/contact-us' method='post')
+        .form-group.row
+          label.col-md-2.col-form-label(for='firstname') First Name
+          .col-md-10
+            input#firstname.form-control(type='text' name='firstname' placeholder='First Name')
+        .form-group.row
+          label.col-md-2.col-form-label(for='lastname') Last Name
+          .col-md-10
+            input#lastname.form-control(type='text' name='lastname' placeholder='Last Name')
+        .form-group.row
+          label.col-md-2.col-form-label(for='telenum') Contact Tel.
+          .col-3.col-md-2
+            input#areacode.form-control(type='tel' name='areacode' placeholder='Area Code')
+          .col-9.col-md-8
+            input#telenum.form-control(type='tel' name='telenum' placeholder='Tele. Number')
+        .form-group.row
+          label.col-md-2.col-form-label(for='emailid') Email
+          .col-md-10
+            input#emailid.form-control(type='text' name='emailid' placeholder='Email')
+        .form-group.row
+          label.col-md-2.col-form-label(for='feedback') Feedback
+          .col-md-10
+            textarea#feedback.form-control(name='feedback' rows='10' placeholder='Feedback')
+        .form-group.row
+          .offset-2.col-md-10
+            button.btn.btn-primary(type='submit')
+              | Send Feedback
+            input.btn.btn-secondary(type='reset' value='Reset')
+    .col-12.col-md
+hr
+.container(style='padding:10px')
+  h1 Connect with us
+  span(style='padding: 10px;')
+    a(href='tel:+917891416331' target='_blank')
+      i.fa.fa-phone(style='font-size:36px')
+  span(style='padding: 10px;')
+    a(href='https://api.whatsapp.com/send?phone=917891416331&text=Hi%20Avyu%20Digital%20%2C%20I%20Came%20across%20your%20profile%20on%20your%20website%20%2C%20I%20need%20query%20about%20your%20product%20and%20service.%20000' target='_blank')
+      i.fa.fa-whatsapp(style='font-size:36px')
+  span(style='padding: 10px;')
+    a(href='/cdn-cgi/l/email-protection#0362757a76676a646a77626f43646e626a6f2d606c6e' target='_blank')
+      i.fa.fa-envelope(style='font-size:36px')
+  span(style='padding: 10px;')
+    a(href='https://www.facebook.com/avyudigital' target='_blank')
+      i.fa.fa-facebook-f(style='font-size:36px')
+  span(style='padding: 10px;')
+    a(href='https://www.instagram.com/avyu_digital' target='_blank')
+      i.fa.fa-instagram(style='font-size:36px')
+  span(style='padding: 10px;')
+    a(href='https://t.me/avyudigital' target='_blank')
+      i(style='color:rgb(0, 136, 255);')
+        i.fa.fa-telegram(style='font-size:36px')
+hr
+//Contact page end
+
+
+// Footer code start
+footer.container
+  .row
+    p.col-12.text-center
+      | &copy; 2021-2022 
+      span Avyu Digital
+    p.col-12.text-center
+      a(href='#homeid') Back to top
+
+// Footer code end
+
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
+
+// Code written by Pankaj Kumar Saini from IIIT Gwalior😎😎😋
