@@ -15,6 +15,8 @@ head
     html {
     scroll-behavior: smooth;
     }
+
+    
 // // adding navaiton bar
 nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
   a.navbar-brand(href='/') AVYU DIGITAL
@@ -30,13 +32,14 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
         a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
           | Services
         .dropdown-menu(aria-labelledby='navbarDropdown')
-          a.dropdown-item(href='#') Clickable PDFs
-          a.dropdown-item(href='#') Graphics Designs
-          a.dropdown-item(href='#') Social Media Post Designing
-          a.dropdown-item(href='#') Product Cover Designing
-          a.dropdown-item(href='#') Web Designing
-          a.dropdown-item(href='#') Web Development
-          a.dropdown-item(href='#') UI/UX
+          each val, key in Project
+            a.dropdown-item(href=`#${val.Name}`) #{val.Name}
+          //- a.dropdown-item(href='#') Graphics Designs
+          //- a.dropdown-item(href='#') Social Media Post Designing
+          //- a.dropdown-item(href='#') Product Cover Designing
+          //- a.dropdown-item(href='#') Web Designing
+          //- a.dropdown-item(href='#') Web Development
+          //- a.dropdown-item(href='#') UI/UX
           .dropdown-divider
           a.dropdown-item(href='#') Support
           a.dropdown-item(href='#') Write for us

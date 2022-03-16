@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import path from 'path';
 const __dirname = path.resolve();
+import field from "field";
 import pug from "pug";
 
 import dotenv from "dotenv";
@@ -47,7 +48,7 @@ const serviceschema = new mongoose.Schema({
     Price : Number,
     Des : String,
     Pic : String
-   
+    // Pic : {type : String, required: true}
 });
  
 // creating a model by compling schema
@@ -70,6 +71,15 @@ app.post('/addservice',(req,res)=>{
         res.send("This is not sent,Try again");
     });
 
+
+   // this is another way of writing lines 66 to 71
+    // try{
+    //     const result = await newData.save();
+    // }
+    // catch(err){
+    // console.log(err.message);
+    // }
+
 });
 
 
@@ -88,20 +98,40 @@ app.get('/',(req,res)=>{
     catch(err){
         console.log(err);
         res.status(404).send("Sahi se kaam karo error aa gayi h ");
+        for (field in err.errors)
+       console.log(err.errors[field].message);
     }
     
 });
 
 
-// Contact us wale form ka nipitra yaha se kargee
+
+// Contact us form code start from here
 
 // Creating a schema
 const contactschema = new mongoose.Schema({
-    firstname : String,
+    firstname :  {
+    type : String,
+    required :true}, // it means first name is requried if user dont fill first name then it will throw error
+
     lastname : String,
+
     areacode : String,
-    telenum : Number,
-    emailid : String,
+
+    telenum : {
+   type : Number,
+   required:true,
+   min : 0,
+   max : 99999999999
+    },
+
+    emailid : {
+        type : String,
+    required :true,
+    minLength: 5,  // it means minmum lenght 5 honi chaaiye 
+    maxlength : 20  // it means maximum length 20 tak ho skati h 
+ },
+
     feedback : String   
 });
 
@@ -109,20 +139,45 @@ const contactschema = new mongoose.Schema({
 const Contact = mongoose.model('Contact-Us',contactschema);
 
 
+// Saving data in database
 app.post('/contact-us',(req,res)=>{
  
-
     // console.log(req.body);
 
     var newData = new Contact(req.body); // bascally i created a new object by req.body 
 
     // and what is req.body ............. this is the body when someone will submit our from .... means when someone request post request jo ki form submit button dabane par aayagi(contact.pug mai form ka action dekh waha likha h )
 
-    newData.save().then(()=>{
+    // newData.save().then(()=>{
+    //     res.send("This item has been sent");
+    // }).catch((err)=>{
+    //     console.log(err);
+    //     res.send("This is not sent,Try again");
+    // });
+
+  async function datasaving(){
+
+    try{
+        const result =  await newData.save();
+        console.log(result);
         res.send("This item has been sent");
-    }).catch((err)=>{
-        console.log(err);
-        res.send("This is not sent,Try again");
-    });
+       }
+    catch(error){
+        res.send("Sahi se kaam karo error aa gayi h ");
+        console.log(error.errors);
+        // below 2 lines will print all errors
+        for(let field in error.errors)
+             console.log(error.errors[field].message);
+    
+    }
+
+
+  }
+  datasaving();
+
 
 });
+
+
+
+
