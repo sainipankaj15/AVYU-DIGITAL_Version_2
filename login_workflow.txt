@@ -1,0 +1,9 @@
+login => { username, password } => user ko find database => 
+checking => 
+yadi user ka emailid and password dono (it means user valid user h tho )
+sahi hai tho user ki _id ko token mai encrypt karega (process.env.JWTprivatekey)
+ye token ko res.cookie se cookies mai save karenge.
+
+req.cookies mai saare cookies aayengi aur yek function mai token extract (decode token => user._Id) 
+karake req.user mai user dal dena hai.
+

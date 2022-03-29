@@ -34,12 +34,6 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
         .dropdown-menu(aria-labelledby='navbarDropdown')
           each val, key in Project
             a.dropdown-item(href=`#${val.Name}`) #{val.Name}
-          //- a.dropdown-item(href='#') Graphics Designs
-          //- a.dropdown-item(href='#') Social Media Post Designing
-          //- a.dropdown-item(href='#') Product Cover Designing
-          //- a.dropdown-item(href='#') Web Designing
-          //- a.dropdown-item(href='#') Web Development
-          //- a.dropdown-item(href='#') UI/UX
           .dropdown-divider
           a.dropdown-item(href='#') Support
           a.dropdown-item(href='#') Write for us
@@ -47,14 +41,17 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
         a.nav-link(href='#aboutid') About Us
       li.nav-item
         a.nav-link(href='#contactid') Contact Us
-    //
-      <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    // <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    button.btn.btn-success(type='button' style='margin: 2px; ') Sign-In
-    button.btn.btn-danger(type='button' style='margin: 2px; ') Sign-Up
+    if Variable2 == "SignUp" 
+      button.btn.btn-success(type='button' style='margin: 2px; ')
+        a(href=Variable1.toLowerCase() style='text-decoration: none; color:white;') #{Variable1}
+      button.btn.btn-danger(type='button' style='margin: 2px; ')
+        a(href=Variable2.toLowerCase() style='text-decoration: none; color:white;') #{Variable2}
+    else 
+      button.btn.btn-success(type='button' style='margin: 2px; ')
+        a(href="/" style='text-decoration: none; color:white;') #{Variable1}
+      button.btn.btn-danger(type='button' style='margin: 2px; ')
+        a(href=Variable2.toLowerCase() style='text-decoration: none; color:white;') #{Variable2}
+    
 // navigation baar code end
 
 
@@ -64,9 +61,6 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
     li.active(data-target='#carouselExampleCaptions' data-slide-to='0')
     li(data-target='#carouselExampleCaptions' data-slide-to='1')
     li(data-target='#carouselExampleCaptions' data-slide-to='2')
-    li(data-target='#carouselExampleCaptions' data-slide-to='3')
-    li(data-target='#carouselExampleCaptions' data-slide-to='4')
-    li(data-target='#carouselExampleCaptions' data-slide-to='5')
   .carousel-inner
     .carousel-item.active
       img.d-block.w-100(src='../static/img/1.jpg' alt='...')
@@ -83,25 +77,6 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
           | In the same way, We do all your digital work in a very clean manner at Avyu Digital
     .carousel-item
       img.d-block.w-100(src='../static/img/3.jpg' alt='...')
-      .carousel-caption.d-none.d-md-block
-        h2
-          | Welcome To Avyu Digital
-        p At Avyu Digital,We pay special attention to quality
-    .carousel-item
-      img.d-block.w-100(src='../static/img/4.jpg' alt='...')
-      .carousel-caption.d-none.d-md-block
-        h2
-          | Welcome To Avyu Digital
-        p Avyu(&#x905;&#x935;&#x94D;&#x92F;&#x941;) means crystal clear
-    .carousel-item
-      img.d-block.w-100(src='../static/img/5.jpg' alt='...')
-      .carousel-caption.d-none.d-md-block
-        h2
-          | Welcome To Avyu Digital
-        p
-          | In the same way, We do all your digital work in a very clean manner at Avyu Digital
-    .carousel-item
-      img.d-block.w-100(src='../static/img/6.jpg' alt='...')
       .carousel-caption.d-none.d-md-block
         h2
           | Welcome To Avyu Digital
@@ -139,8 +114,9 @@ br#aboutid
 br
 br
 
-// // about page start
-.container.marketing
+
+// new about page
+.container.marketing(style=' display: flex; align-items:center; justify-content: center;')
   hr.featurette-divider
   .row.featurette.d-flex.justify-content-center.align-items-center.mb-4
     .col-md-4
@@ -160,12 +136,8 @@ br
       |  Words by 
       a(href='https://www.instagram.com/choudharyy_md/ ' target='_blank') Manoj Dangi
       hr
-    .col-md-5
-      //- img.bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto.img-fluid(src='../static/img/owner_manoj.jpg.png' width='400' height='400' preserveaspectratio='xMidYMid slice' focusable='false' role='img' aria-label='Placeholder: 500x500')
-      title Placeholder
-      rect(width='100%' height='100%' fill='#eee')
-      text(x='50%' y='50%' fill='#aaa' dy='.3em')
-// about page end
+// new about page end
+
 
 
 // contact page start

@@ -1,0 +1,35 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Sign In (Old User) 
+  // Font Icon
+  link(rel='stylesheet' href='../static/loginANDsignup/fonts/material-icon/css/material-design-iconic-font.min.css')
+  // Main css
+  link(rel='stylesheet' href='../static/loginANDsignup/css/style.css')
+  link(rel='icon' href='../static/img/logo.png')
+.main
+  // Sing in  Form
+  section.sign-in
+    .container
+      .signin-content
+        .signin-image
+          figure
+            img(src='../static/loginANDsignup/images/signin-image.jpg' alt='sing up image')
+          a.signup-image-link(href='/signup') Create an account
+        .signin-form
+          h2.form-title Sign In
+          form#login-form.register-form(action='/signin' method='post')
+            .form-group
+              label(for='your_name')
+                i.zmdi.zmdi-account.material-icons-name
+              input#your_name(type='text' name='email' placeholder='Your Email')
+            .form-group
+              label(for='your_pass')
+                i.zmdi.zmdi-lock
+              input#your_pass(type='password' name='password' placeholder='Password')
+            .form-group.form-button
+              input#signin.form-submit(type='submit' name='signin' value='Log in')
+// JS
+script(src='../static/loginANDsignup/vendor/jquery/jquery.min.js')

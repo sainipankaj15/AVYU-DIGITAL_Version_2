@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Sign Up (New User)
+  // Font Icon
+  link(rel='stylesheet' href='../static/loginANDsignup/fonts/material-icon/css/material-design-iconic-font.min.css')
+  // Main css
+  link(rel='stylesheet' href='../static/loginANDsignup/css/style.css')
+  link(rel='icon' href='../static/img/logo.png')
+.main
+  // Sign up form
+  section.signup
+    .container
+      .signup-content
+        .signup-form
+          h2.form-title Sign up
+          form#register-form.register-form(action='/signup' method='post')
+            .form-group
+              label(for='name')
+                i.zmdi.zmdi-account.material-icons-name
+              input#name(type='text' name='name' placeholder='Your Name')
+            .form-group
+              label(for='email')
+                i.zmdi.zmdi-email
+              input#email(type='email' name='email' placeholder='Your Email')
+            .form-group
+              label(for='pass')
+                i.zmdi.zmdi-lock
+              input#pass(type='password' name='password' placeholder='Password')
+            .form-group.form-button
+              input#signup.form-submit(type='submit' name='signup' value='Register')
+        .signup-image
+          figure
+            img(src='../static/loginANDsignup/images/signup-image.jpg' alt='sing up image')
+          a.signup-image-link(href='/signin') I am already member
+// JS
+script(src='../static/loginANDsignup/vendor/jquery/jquery.min.js')
