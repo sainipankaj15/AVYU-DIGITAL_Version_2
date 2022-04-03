@@ -11,7 +11,6 @@ import cookieparser from "cookie-parser";
 import lodash from "lodash";
 import pug from "pug";
 import { response } from "express";
-const PORT = process.env.PORT || 8000;
 import contact from "./routes/contact.js";
 import service from "./routes/service.js";
 import signup from "./routes/signup.js";
@@ -22,6 +21,7 @@ import auth from "./middlewares/auth.js";
 
 
 dotenv.config(); // by writing this we can access .env file 
+const PORT = process.env.PORT || 8000;
 
 // Express stuff
 const app = express();
