@@ -18,6 +18,7 @@ import home from "./routes/home.js";
 import logout from "./routes/logout.js";
 import signin from "./routes/signin.js";
 import auth from "./middlewares/auth.js";
+import { logerr, logErr } from "./helpers/debugger.js";
 
 
 dotenv.config(); // by writing this we can access .env file 
@@ -62,3 +63,9 @@ app.get('/:req.firstname',(req,res)=>{
     
     res.status(200).redirect('/');
 })
+
+
+// for debugging module : to make easy debugging
+// both below lines are useless but very useful in debugging
+logErr("Ye nahi chalega");
+logerr("ye chal jayega");
