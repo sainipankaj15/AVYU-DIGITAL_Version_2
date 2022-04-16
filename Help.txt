@@ -1,0 +1,26 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::Help 1 :::::::::::::::::::::::::::::::::::::::::::
+
+To run this code in developemt phase 
+run the command "npm run start:dev:" and remeber u have to set CONNECTION_URL and jwtprivatekey in .env file 
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::Help 2 :::::::::::::::::::::::::::::::::::::::::::
+
+Help 2: There is a folder helpers. In this folder there is a file "debugger.js" which is useful for debugging 
+means u dont need to write again and again console.log just define keywords with namespaces in debugger.js and also write in .env file means which keywords you want to use and use it 
+
+this is very time saving 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::Help 3 :::::::::::::::::::::::::::::::::::::::::::
+
+In package.json -> in the scrpit property i wrote test = jest --watchAll --coverage
+
+Jest is the module name which helps to test(unit and intergration test)
+
+--watchAll is a flag. it's work is like nodemon means u dont have to run again and again "npm test" for testing. just by adding --watchAll flag it will automatically test the code 
+
+--coverage flag shows  how much our code is tested and how much are remaining 
