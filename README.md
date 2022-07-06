@@ -1,4 +1,4 @@
-Hi, This is Pankaj, a **MERN Stack Developer**. This is a free-lancing website (A lighter version of an e-commerce website). <br>
+Hi, This is Pankaj, a **MERN Stack Developer**. This is a Freelancing website (A lighter version of an e-commerce website). <br>
 I have created it using with view engine **Pug** for frontend, **Node and Express** for Backend, **MongoDB** for storing data and Deployed on the **Heroku.**
 <br> <br>
 > ### Web App Link - https://avyudigital.herokuapp.com/
