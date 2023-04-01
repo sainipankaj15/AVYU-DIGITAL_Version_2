@@ -13,8 +13,9 @@ const auth = async (req, res, next) => {
             // console.log(obj);
 
             req.user = obj;
-    
+            console.log(req);
             console.log(req.user);
+            console.log(req.user.firstname);
             
 
         }
